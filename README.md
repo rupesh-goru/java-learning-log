@@ -26,4 +26,4 @@ This repository contains my Java practice programs and concepts learned during m
 - GitHub
 
 ## Learning Goal
-To become a Java Full Stack Developer by building strong fundamentals and real-world projects.
+To become a Java Full Stack Developer by building strong fundamentals and real world projects.
