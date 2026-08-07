@@ -1,4 +1,8 @@
 package com.dynamicmethoddispatch;
 
-public class DynamicMethodDispatch {
+public interface Sim {
+
+    int a = 10;
+    void calling();
+    void ott();
 }
