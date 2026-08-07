@@ -13,7 +13,7 @@ This repository contains my Java practice programs and concepts learned during m
 ## Topics Covered
 - ✅ Object Class
 - ✅ Has-A Relationship
-- ✅ Arrays-Object class-extended
+- ✅ Arrays-Object class extended
 - ✅ Wrapper Classes
 - ⏳ Exception Handling
 - ⏳ Collections Framework
