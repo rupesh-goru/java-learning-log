@@ -18,6 +18,7 @@ public class User {
             System.out.println("Hiiiiii from if the try block works or else will not come");
         }
         catch (Exception e) {
+            System.out.println(e.getMessage()); // this prints msg.
             System.out.println("Invalid input / do not divide by zero or try to divide by other number");
         }
         System.out.println("Bye....instantly comes if try works and if try also not works out directly here");
