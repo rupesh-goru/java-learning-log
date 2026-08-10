@@ -16,7 +16,7 @@ This repository contains my Java practice programs and concepts learned during m
 - ✅ Arrays-Object class extended
 - ✅ Wrapper Classes
 - ✅ Dynamic Method Dispatch(DMD)
-- ⏳ Exception Handling
+- ✅ Exception Handling
 - ⏳ Collections Framework
 - ⏳ Multithreading
 
