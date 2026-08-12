@@ -17,8 +17,10 @@ This repository contains my Java practice programs and concepts learned during m
 - ✅ Wrapper Classes
 - ✅ Dynamic Method Dispatch(DMD)
 - ✅ Exception Handling
+- ✅ File Handling
+- ✅ Multithreading
 - ⏳ Collections Framework
-- ⏳ Multithreading
+
 
 ## Tools Used
 - Java
