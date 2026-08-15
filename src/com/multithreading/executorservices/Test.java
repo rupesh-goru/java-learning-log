@@ -17,6 +17,6 @@ public class Test {
         ExecutorService singleThreadExecutor = Executors.newSingleThreadExecutor();
         singleThreadExecutor.execute(t1);
         singleThreadExecutor.execute(t2);
-        singleThreadExecutor.shutdown();
+        singleThreadExecutor.shutdown(); // this is called closing of the thread pool
     }
 }
