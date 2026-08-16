@@ -19,6 +19,11 @@ This repository contains my Java practice programs and concepts learned during m
 - ✅ Exception Handling
 - ✅ File Handling
 - ✅ Multithreading
+     -Basics
+     -Thread methods
+     -Deadlock
+     -Wait(); and notify(), notifyAll();
+     -Executor Services
 - ⏳ Collections Framework
 
 
