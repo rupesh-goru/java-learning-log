@@ -1,4 +1,4 @@
-package com.collections;
+package com.collections.lists;
 
 public class Student {
     int studentID;
