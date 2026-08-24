@@ -84,6 +84,7 @@ public class Maps {
         map.put(null, "Harshitha");
         map.put(null, null);//value gets overridden here.
         map.put(6, null);
+        map.put(7, null);
 
         /*To print values or to get the output.*/
         System.out.println(map);
