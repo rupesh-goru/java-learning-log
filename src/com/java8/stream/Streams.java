@@ -53,7 +53,7 @@ public class Streams {
                 .stream()
                 .sorted(Comparator.reverseOrder())
                 .distinct()
-                .limit(2)
+                .limit(3)
                 .toList();
         System.out.println(limitedData);
 
