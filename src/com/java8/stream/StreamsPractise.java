@@ -2,11 +2,32 @@ package com.java8.stream;
 
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class StreamsPractise {
 
     static void main(String[] args) {
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //groupingByFunctions();
+        //joiningOperationsOnStrings();
         //reduceOpearation();
         //parallelStream();
         //partitioning();
@@ -15,6 +36,150 @@ public class StreamsPractise {
         //aggregateFunctions();
         //hashMapOperations();
         //mapOperations();
+    }
+
+    private static void groupingByFunctions() {
+        /*Interview Q. Counting of characters. using groupingBy.*/
+        String language = "JAVA";
+
+        Map<Character, Long> collect = language
+                .chars()
+                .mapToObj(c -> (char) c)
+                .collect(Collectors.groupingBy(c -> c, Collectors.counting()));
+        System.out.println(collect);
+
+        /*Interview Q. Above Q in ascending order- to achieve this simply use treeMap that's it.*/
+        String bowler = "JASPRITBUMRAH";
+        Map<Character, Long> ascendingOrder = bowler
+                .chars()
+                .mapToObj(c -> (char) c)
+                .collect(Collectors.groupingBy(c -> c,()-> new TreeMap<>(), Collectors.counting()));
+        System.out.println(ascendingOrder);
+
+        /*Interview Q. Above Q in DESCENDING order- to achieve this simply use treeMap that's it.*/
+        String batsMan = "VIRATKOHLI";
+
+        Map<Character, Long> descendingOrder = batsMan
+                .chars()
+                .mapToObj(c -> (char) c)
+                .collect(Collectors.groupingBy(
+                        c -> c,
+                        () -> new TreeMap<Character, Long>(Comparator.reverseOrder()),
+                        Collectors.counting()
+                ));
+
+        System.out.println(descendingOrder);
+
+        /*Interview Q. Finding frequency of the word in a string. */
+        String names = "Rupesh Sahithi Goru Surya Sahithi Goru Kumar Sahithi Goru Pavan Rupesh Sahithi";
+
+        Map<String, Long> collect1 = Arrays.stream(names.split(" "))
+                .collect(Collectors.groupingBy(str -> str, Collectors.counting()));
+        System.out.println(collect1);
+    }
+
+    private static void joiningOperationsOnStrings() {
+        String name = "FRONTLINESEDUTECH";
+
+        List<Character> list = name
+                .chars()
+                .mapToObj(c -> (char) c)
+                .toList();
+        System.out.println(list);
+
+        //Remove duplicates from this string
+
+        List<Character> list1 = name
+                .chars()
+                .distinct()
+                .mapToObj(c -> (char) c)
+                .toList();
+        System.out.println(list1);
+
+        /*Interview Q. Remove duplicates from the string and return a string. */
+
+        String collect = name
+                .chars()
+                .distinct()
+                .mapToObj(c -> String.valueOf((char) c))
+                .collect(Collectors.joining());
+        System.out.println(name);
+        System.out.println(collect);
+
+        /*Interview Q. A comma (,) should be added each & every character of a string.*/
+
+        String collect1 = name
+                .chars()
+                .mapToObj(c -> String.valueOf((char) c))
+                .collect(Collectors.joining(",")); //can put "-", "*" & anything.
+        System.out.println(collect1);
+
+        /*Interview Q. these characters to be hypen(-) separated.
+        * from: FRONT LINES MEDIA
+        * to - F-R-O-N-T-L-I-N-E-S-E-D-U-T-E-C-H*/
+
+        String name2 = "FRONT LINES EDUTECH";
+
+        String collect2 = name2
+                .chars()
+                .filter(c -> c != ' ')
+                .mapToObj(c -> String.valueOf((char) c))
+                .collect(Collectors.joining("-"));
+        System.out.println(collect2);
+
+        /*Interview Q. Visually this should look like a list of chars but you should not use a list/array.*/
+        /*FRONT
+        * [F,R,O,N,T]*/
+
+        String city = "VISAKHAPATNAM";
+
+        String urbanArea = city
+                .chars()
+                .mapToObj(c -> String.valueOf((char) c))
+                //joining takes 3 parameters: With delimiter, prefix(1st place) and suffix(last place).
+                .collect(Collectors.joining("," , "[", "]"));
+        System.out.println(urbanArea);
+
+        /*Operation bw word to word.*/
+        /*Interview Q. Change the string = "FRONT LINES EDUTECH"
+        * to : FRONT-LINES-EDUTECH
+        * without using replace() method.*/
+
+        String company = "FRONT LINES EDUTECH";
+        // String company = "FRONT-LINES-EDUTECH";
+
+        String[] split = company.split(" ");
+        //String[] split = company.split("-");
+        /*We can also stream on Arrays using Arrays.stream*/
+        String collect3 = Arrays.stream(split)
+                .collect(Collectors.joining("-"));
+        //.collect(Collectors.joining(","));
+        System.out.println(collect3);
+
+
+        /*VERY VERY imporatant Interview Q.
+        * A string will be given and will be asked to remove if any duplicate words are there.
+        * For example: before removing: - "India is a beautiful country and India is a diverse nation"
+        * After removing(add - bw words): - "India is a beautiful country and a diverse nation"*/
+
+        String sentence = "India is a beautiful country and India is a diverse nation";
+        String[] split1 = sentence.split(" ");
+        String collect4 = Arrays.stream(split1)
+                .distinct()
+                .collect(Collectors.joining("-"));
+        System.out.println(collect4);
+
+        /*Same Q as above but: return a string back with 1st letter of each word. */
+
+        //Expected Output: IiabcaIiadn
+
+        String[] split2 = sentence.split(" ");
+        String collect5 = Arrays.stream(split2)
+                .distinct() // duplicate words
+                .map(str -> String.valueOf(str.charAt(0)))
+                //.distinct() // duplicate first characters
+                .collect(Collectors.joining());
+        System.out.println(collect5);
     }
 
     private static void reduceOpearation() {
