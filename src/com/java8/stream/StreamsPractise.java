@@ -8,24 +8,6 @@ public class StreamsPractise {
 
     static void main(String[] args) {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         //groupingByFunctions();
         //joiningOperationsOnStrings();
         //reduceOpearation();
@@ -204,7 +186,7 @@ public class StreamsPractise {
                 .reduce(1, (x, y) -> x * y); //here identity/initial value has to be 1, if 0 is initial value anything *0 is = '0' so the initial value has to be 1 for producting case.
         System.out.println(product);
 
-        /*Adding of string using reduce()*/
+        /*Adding of string using reduce().*/
         List<String> airport = Arrays.asList("Visakhapatnam" , "International" , "Airport");
 
         String summingOfStrings = airport
