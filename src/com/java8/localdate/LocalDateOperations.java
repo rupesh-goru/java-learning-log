@@ -49,6 +49,9 @@ public class LocalDateOperations {
         LocalDate validTill = LocalDate.of(2028,6,1);
         System.out.println(LocalDate.now().isBefore(validTill));
 
+        LocalDate expiryDate = LocalDate.of(2027,1,1);
+        System.out.println(LocalDate.now().isAfter(expiryDate));
+
 
 
 
