@@ -88,5 +88,6 @@ YYYY gives full year
         System.out.println(LocalDateTime.now().minusHours(23));
         System.out.println(LocalDateTime.now().minusMinutes(28));
         System.out.println(LocalDateTime.now().minusYears(2));
+        System.out.println(LocalDateTime.now().minusMonths(2));
     }
 }
