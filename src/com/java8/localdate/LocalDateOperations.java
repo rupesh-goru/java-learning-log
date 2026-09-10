@@ -39,6 +39,7 @@ public class LocalDateOperations {
         System.out.println(date.minusDays(55555));
         System.out.println(date.plusMonths(96));
         System.out.println(date.minusMonths(8));
+        System.out.println(date.minusDays(1));
 
         //50th of this year.
         LocalDate date1 = LocalDate.of(2000,1,1); //leap year
