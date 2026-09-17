@@ -36,7 +36,7 @@ public class LocalDateOperations {
         System.out.println(date.lengthOfMonth());
         System.out.println(date.lengthOfYear());
         System.out.println(date.plusDays(1));
-        System.out.println(date.minusDays(55555));
+        System.out.println(date.minusDays(555545));
         System.out.println(date.plusMonths(96));
         System.out.println(date.minusMonths(8));
 
