@@ -20,7 +20,7 @@ public class SignUp {
 
         Statement statement = DBConnection.getStatement();
         try {
-            statement.executeUpdate("insert into users(user_name, password) values(' " + userName + " ', ' " + password + " ')");
+            statement.executeUpdate("insert into users(user_name, password) values('" + userName + "','" + password + "')");
             System.out.println("You have signed up successfully!");
         } catch (SQLException e) {
             System.out.println("Username already exists!");
