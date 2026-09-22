@@ -38,6 +38,11 @@ public class Test {
         System.out.println(metaData.getTableName(1));
 
 
+        //to see in a tabular representation.-
+        System.out.println(
+                metaData.getColumnName(1) + " "
+        + metaData.getColumnName(2) + " "
+        + metaData.getColumnName(3));
         while (resultSet.next()){
 
             System.out.println(resultSet.getInt(1) + " " + resultSet.getString(2) + " " + resultSet.getInt(3));
