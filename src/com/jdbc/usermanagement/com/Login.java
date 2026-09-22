@@ -32,7 +32,7 @@ public class Login {
         ResultSet rs = statement.executeQuery(query);
 
         if (rs.next()) {
-            System.out.println("Logged In Successfully");
+            System.out.println("Logged In ");
         } else {
             System.out.println("Invalid Username or Password");
         }
