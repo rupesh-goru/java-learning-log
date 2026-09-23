@@ -9,7 +9,7 @@ import java.sql.Statement;
 
 public class Test {
 
-    static void main(String[] args) throws SQLException {
+    public static void main(String[] args) throws SQLException {
 
         Statement statement = DBConnection.getStatement();
 
@@ -43,11 +43,11 @@ public class Test {
                 metaData.getColumnName(1) + " "
         + metaData.getColumnName(2) + " "
         + metaData.getColumnName(3));
+
+
         while (resultSet.next()){
 
             System.out.println(resultSet.getInt(1) + " " + resultSet.getString(2) + " " + resultSet.getInt(3));
-
-
 
 
         }

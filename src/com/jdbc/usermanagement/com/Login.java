@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class Login {
 
-    static void main(String[] args) throws SQLException {
+   static void main(String[] args) throws SQLException {
 
         Scanner sc = new Scanner(System.in);
 
@@ -21,20 +21,29 @@ public class Login {
 
         Statement statement = DBConnection.getStatement();
 
-        System.out.println("Connected Database: " +
+       /*System.out.println("Connected Database: " +
                 statement.getConnection().getCatalog());
-
+*/
         String query = "SELECT * FROM users WHERE user_name = '"
                 + userName + "' AND password = '" + password + "'";
 
-        System.out.println("Query: " + query);
+        //System.out.println("Query: " + query);
 
         ResultSet rs = statement.executeQuery(query);
 
-        if (rs.next()) {
-            System.out.println("Logged In ");
-        } else {
-            System.out.println("Invalid Username or Password");
+            //this if condition is-to check if username is correct.
+            /*if (rs.getString(3).equals(password)) {
+                System.out.println("Logged In!");
+            }else  {
+                System.out.println("Wrong Password!");
+            }*/
+            if (rs.next()) {
+                System.out.println("Logged in successfully!");
+            } else {
+                System.out.println("Invalid credentials!");
+
+            }
         }
     }
-}
+
+    
